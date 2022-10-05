@@ -1,0 +1,15 @@
+{% extends 'customer/layout.html' %}
+{% load static %}
+{% block body %}   
+    <div>
+        <img src="{{ employee.image.url }}" style="width: 300px; height: 300px; margin-left: 20px; margin-top: 50px;">
+        <ul style="margin-left: 400px; font-size: 30px; margin-top: -250px;">
+            <li>First Name:  {{ employee.firstname }}</li>
+            <li>Last Name:  {{ employee.lastname }}</li>
+            <li>E-mail:  {{ employee.email }}</li>
+            <li>NIC:  {{ employee.nic }}</li>
+            <li>Mobile Number:  {{ employee.mobile }}</li>
+            <li>Gender:  {{ employee.gender }}</li>
+        </ul>
+    </div>
+{% endblock %}

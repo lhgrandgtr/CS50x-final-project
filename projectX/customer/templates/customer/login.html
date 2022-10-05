@@ -1,0 +1,15 @@
+{% extends 'customer/layout.html' %}
+{% load static %}
+
+{% block body %}
+    <h1 style="margin-left: 400px;">Log In</h1>
+    <form action="" autocomplete="off" method="post" style="margin-left: 30px; margin-top: 50px;">
+        {% csrf_token %}
+        Username: <input type="text" name="Username">
+        <br>
+        Password: <input type="password" name="password" style="margin-top: 30px;">
+        <br/>
+        <input type="submit" value="Log In" class="btn btn-primary" style="margin-top: 30px;">
+        <img src="{% static 'customer/images.jpeg' %}" style="margin-left: 400px; height: 250px; width: 350px; margin-top: -100px;">
+    </form>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: "{% static 'customer/index.jpeg' %}";
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'customer/styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <!-- Favicon -->
+</head>
+<body>
+
+{% include 'customer/navbar.html' %}
+    
+        <br/>
+        
+          
+        <dev>
+            <div class="alert alert-warning" role="alert">
+                <br/>
+                {% if messages %}
+                    {% for message in messages %}
+                         {{ message }}
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <br/>
+            {% block body %}{% endblock %}
+        </dev>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

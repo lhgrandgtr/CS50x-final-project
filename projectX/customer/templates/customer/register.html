@@ -1,0 +1,17 @@
+{% extends 'customer/layout.html' %}
+
+{% block body %}
+{% if form.error %}
+    <h4>There was an error.</h4>
+{% endif %}
+
+<dev>
+        <h2 style="margin-left: 400px;">Sign Up Now!</h2>
+    <form autocomplete="off" action="{% url 'customer:register' %}" method="post" style="margin-left: 30px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br/>
+        <input type="submit" value="Sign Up" class="btn btn-primary" id="sign">
+    </form>
+</dev>
+{% endblock %}

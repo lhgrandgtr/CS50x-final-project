@@ -1,0 +1,12 @@
+{% extends 'customer/layout.html' %}
+{% load static %}
+
+{% block body %}
+<h2 style="margin-left: 20px;">The list of all our employees</h2>
+    <ul style="margin-left: 50px; list-style-type: none;">
+        {% for employee in employees %}
+            <li><a href="{% url 'customer:profile' employee.id %}">{{ employee.firstname }} {{ employee.lastname }}</a></li>
+        {% endfor %}
+    </ul>
+    <img src="{% static 'customer/index.jpeg' %}" style="height: 200px; width: 350px; margin-left: 400px; margin-top: -100px;">
+{% endblock %}

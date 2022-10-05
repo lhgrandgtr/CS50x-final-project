@@ -1,0 +1,48 @@
+{% extends 'customer/layout.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="container pt-5 pb-3">
+    <h1 class="display-4 text-uppercase text-center mb-5">Our Services</h1>
+    <div class="row">       
+        <div class="col-lg-3 mb-2">
+            <a href="{% url 'customer:house' %}">
+                <div class="p-3 mb-4 btn btn-outline-primary">               
+                    <h4 class="text-uppercase mb-4">House Cleaning</h4>
+                    <p class="m-0">We clean you house for you for your satisfactory...</p>
+                </div>
+            </a>
+            <img src="{% static 'customer/index9.jpeg' %}" style="height: 200px; width: 200px;">        
+        </div>
+        <div class="col-lg-3 mb-2">
+            <a href="{% url 'customer:pipe' %}">
+                <div class=" p-3 mb-4 btn btn-outline-primary">
+                    <h4 class="text-uppercase mb-4">Plumber Works</h4>
+                    <p class="m-0">We do your day-to-day pipe-line work... </p>
+                </div>
+            </a>    
+            <img src="{% static 'customer/images8.png' %}" style="height: 180px; width: 280px; margin-left: -40px;">    
+        </div>
+        <div class="col-lg-3 mb-2">
+            <a href="{% url 'customer:roof' %}">
+                <div class=" p-3 mb-4 btn btn-outline-primary">               
+                    <h4 class="text-uppercase mb-4">Roof Repiar</h4>
+                    <p class="m-0">We do your daily constructions...</p>
+                </div>
+            </a>   
+            <img src="{% static 'customer/index7.png' %}" style="height: 150px; width: 280px; margin-left: -40px;margin-top: 20px;">     
+        </div>
+        <div class="col-lg-3 mb-2">
+            <a href="{% url 'customer:garden' %}">
+                <div class="p-3 mb-4 btn btn-outline-primary">               
+                    <h4 class="text-uppercase mb-4">Garden / Yard work</h4>
+                    <p class="m-0">We clean you garden or yard for you for your satisfactory...</p>
+                </div>
+            </a> 
+            <img src="{% static 'customer/index.jpeg' %}" style="height: 180px; width: 280px; margin-left: -20px;">       
+        </div>
+    </div>
+</div>
+
+{% endblock %}
